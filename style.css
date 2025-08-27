@@ -54,7 +54,7 @@ body, html {
 }
 
 #openBtn:hover {
-  background-color: #f871a0;
+  background-color: #137929;
 }
 
 
@@ -323,7 +323,7 @@ body, html {
 }
 
 .cta-button:hover {
-  background-color: #f871a0;
+  background-color: #137929;
   transform: scale(1.03);
   
 }
