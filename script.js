@@ -70,3 +70,55 @@ function fireConfetti() {
 
   update();
 }
+function startSnow() {
+  const canvas = document.getElementById('snow-canvas');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  const snowflakes = [];
+
+  function createSnowflakes() {
+    const x = Math.random() * width;
+    const y = 0;
+    const radius = Math.random() * 3 + 1;
+    const speedY = Math.random() * 1 + 0.5;
+    const speedX = Math.random() * 0.5 - 0.25;
+    snowflakes.push({x, y, radius, speedY, speedX});
+  }
+
+  function updateSnowflakes() {
+    ctx.clearRect(0, 0, width, height);
+    snowflakes.forEach((flake, index) => {
+      flake.y += flake.speedY;
+      flake.x += flake.speedX;
+      if (flake.y > height) snowflakes.splice(index, 1);
+    });
+    drawSnowflakes();
+  }
+
+  function drawSnowflakes() {
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    snowflakes.forEach(flake => {
+      ctx.moveTo(flake.x, flake.y);
+      ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+    });
+    ctx.fill();
+  }
+
+  function loop() {
+    createSnowflakes();
+    updateSnowflakes();
+    requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  loop();
+}
+
+startSnow();
