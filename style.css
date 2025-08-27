@@ -336,3 +336,15 @@ body, html {
   height: 100vh;
   z-index: 2; /* между контентом и бликами */
 }
+
+.emoji-jump {
+  display: inline-block;
+  animation: floatEmoji 1.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes floatEmoji {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
