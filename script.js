@@ -10,7 +10,7 @@ document.getElementById('openBtn').addEventListener('click', function () {
 // Эмодзи-дождь
 function createEmojiRain() {
   const container = document.querySelector('.emoji-container');
-  const emojis = ['🐶', '🐱', '🐾'];
+  const emojis = ['🐶', '🎁', '🐾'];
   const emoji = document.createElement('div');
   emoji.classList.add('emoji');
   emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
