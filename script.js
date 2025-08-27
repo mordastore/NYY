@@ -79,6 +79,7 @@ function startSnow() {
   const snowflakes = [];
 
   function createSnowflakes() {
+    if (Math.random() < 0.5) return;
     const x = Math.random() * width;
     const y = 0;
     const radius = Math.random() * 3 + 1;
