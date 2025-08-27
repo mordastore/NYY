@@ -41,21 +41,24 @@ body, html {
 
 #openBtn {
   padding: 15px 25px;
-  background-color: #ff94b6;
-  color: white;
-  border: none;
+  background-color: #d60000;
+  color: #fffbe6;
+  border: 2px solid #ffd700;
   border-radius: 20px;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  transition: all 0.3s ease;
   z-index: 10;
   position: relative;
 }
 
 #openBtn:hover {
-  background-color: #f871a0;
+  background-color: #b30000;
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
 }
+
 
 .certificate {
   display: none;
