@@ -375,4 +375,38 @@ body, html {
     opacity: 0;
   }
 }
+.certificate::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255, 80, 120, 0.3), transparent 70%);
+  animation: holidayGlow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes holidayGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.3);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 200, 200, 0.6);
+    opacity: 1;
+  }
+}
+
+@keyframes holidayGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.3);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 200, 200, 0.6);
+    opacity: 1;
+  }
+}
 
