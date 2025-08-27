@@ -123,3 +123,21 @@ function startSnow() {
 }
 
 startSnow();
+
+function summonReindeer() {
+  const deer = document.getElementById('reindeer');
+  deer.style.opacity = '1';
+  deer.style.animation = 'walkAcross 15s linear forwards';
+
+  // Сброс через 20 секунд
+  setTimeout(() => {
+    deer.style.animation = 'none';
+    deer.style.opacity = '0';
+  }, 20000);
+}
+
+// Запускаем каждые 30 секунд
+setInterval(summonReindeer, 30000);
+
+// Первый запуск — через 3 секунды
+setTimeout(summonReindeer, 3000);
